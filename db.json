@@ -1,0 +1,20 @@
+{
+  "employee": [
+    {
+      "id": "1",
+      "name": "Raj Gupta",
+      "address": {
+        "line1": "Near SP College, Tilak Road",
+        "city": "Pune",
+        "country": "India",
+        "zip_code": "411002"
+      },
+      "contact_methods": [
+        {
+          "contact_method": "EMAIL",
+          "value": "raj@in.com"
+        }
+      ]
+    }
+  ]
+}
