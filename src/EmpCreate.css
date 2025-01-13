@@ -1,0 +1,5 @@
+.form-group label {
+    text-align: left;
+    display: block;  /* Ensure label is on a new line */
+    margin-bottom: 10px;  /* Adjust margin for better spacing */
+}

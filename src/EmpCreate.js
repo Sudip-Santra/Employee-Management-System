@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import './EmpCreate.css';
 
 const EmpCreate = () => {
     const [id, idChange] = useState("");
@@ -14,7 +15,7 @@ const EmpCreate = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch("https://free-ap-south-1.cosmocloud.io/development/api/employee_db")
+        fetch("http://localhost:8000/employee/")
             .then((res) => res.json())
             .then((data) => {
                 const highestId = Math.max(...data.map(emp => emp.id), 0);
@@ -38,7 +39,7 @@ const EmpCreate = () => {
             ]
         };
 
-        fetch("https://free-ap-south-1.cosmocloud.io/development/api/employee_db", {
+        fetch("http://localhost:8000/employee/", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(empData)
@@ -55,8 +56,8 @@ const EmpCreate = () => {
             <div className="row">
                 <div className="offset-lg-3 col-lg-6">
                     <form className="container" onSubmit={handleSubmit}>
-                        <div className="card" style={{ textAlign: "left" }}>
-                            <div className="card-title">
+                        <div className="card shadow-lg" style={{ padding: "20px", marginTop: "30px" }}>
+                            <div className="card-title text-center p-3 border-bottom">
                                 <h2>Add Employee</h2>
                             </div>
                             <div className="card-body">
@@ -64,60 +65,62 @@ const EmpCreate = () => {
                                     <div className="col-lg-12">
                                         <div className="form-group">
                                             <label>Employee ID:</label>
-                                            <input value={id} disabled="disabled" className="form-control"></input>
+                                            <input value={"Will Be Generated Automatically "} disabled="disabled" className="form-control" />
                                         </div>
                                     </div>
                                     <div className="col-lg-12">
                                         <div className="form-group">
                                             <label>Name:</label>
-                                            <input value={name} onChange={e => nameChange(e.target.value)} className="form-control" required></input>
+                                            <input value={name} onChange={e => nameChange(e.target.value)} className="form-control" required />
                                         </div>
                                     </div>
                                     <div className="col-lg-12">
                                         <div className="form-group">
                                             <label>Address Line1:</label>
-                                            <input value={address_line1} onChange={e => address_line1Change(e.target.value)} className="form-control"></input>
+                                            <input value={address_line1} onChange={e => address_line1Change(e.target.value)} className="form-control" />
                                         </div>
                                     </div>
                                     <div className="col-lg-12">
                                         <div className="form-group">
                                             <label>City:</label>
-                                            <input value={city} onChange={e => cityChange(e.target.value)} className="form-control"></input>
+                                            <input value={city} onChange={e => cityChange(e.target.value)} className="form-control" />
                                         </div>
                                     </div>
                                     <div className="col-lg-12">
                                         <div className="form-group">
                                             <label>Country:</label>
-                                            <input value={country} onChange={e => countryChange(e.target.value)} className="form-control"></input>
+                                            <input value={country} onChange={e => countryChange(e.target.value)} className="form-control" />
                                         </div>
                                     </div>
                                     <div className="col-lg-12">
                                         <div className="form-group">
                                             <label>Zip Code:</label>
-                                            <input value={zip_code} onChange={e => zip_codeChange(e.target.value)} className="form-control"></input>
+                                            <input value={zip_code} onChange={e => zip_codeChange(e.target.value)} className="form-control" />
                                         </div>
                                     </div>
                                     <div className="col-lg-12">
                                         <div className="form-group">
                                             <label>Contact Method:</label>
-                                            <label style={{ marginLeft: '15px' }}>
-                                                <input
-                                                    type="radio"
-                                                    value="EMAIL"
-                                                    checked={contactMethod === 'EMAIL'}
-                                                    onChange={(e) => setContactMethod(e.target.value)}
-                                                />
-                                                Email
-                                            </label>
-                                            <label style={{ marginLeft: '15px' }}>
-                                                <input
-                                                    type="radio"
-                                                    value="PHONE"
-                                                    checked={contactMethod === 'PHONE'}
-                                                    onChange={(e) => setContactMethod(e.target.value)}
-                                                />
-                                                Phone
-                                            </label>
+                                            <div style={{ display: 'flex', gap: '20px' }}>
+                                                <label>
+                                                    <input
+                                                        type="radio"
+                                                        value="EMAIL"
+                                                        checked={contactMethod === 'EMAIL'}
+                                                        onChange={(e) => setContactMethod(e.target.value)}
+                                                    />
+                                                    Email
+                                                </label>
+                                                <label>
+                                                    <input
+                                                        type="radio"
+                                                        value="PHONE"
+                                                        checked={contactMethod === 'PHONE'}
+                                                        onChange={(e) => setContactMethod(e.target.value)}
+                                                    />
+                                                    Phone
+                                                </label>
+                                            </div>
                                         </div>
                                         <div className="form-group">
                                             <label>{contactMethod === 'EMAIL' ? 'Email' : 'Phone'}:</label>
