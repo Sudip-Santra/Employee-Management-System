@@ -58,6 +58,7 @@ const EmpListing = () => {
                                 <tr>
                                     <th>Emp Id</th>
                                     <th>Name</th>
+                                    <th>Designation</th>
                                     <th>Address Line1</th>
                                     <th>City</th>
                                     <th>Country</th>
@@ -80,6 +81,7 @@ const EmpListing = () => {
                                         <tr key={item.id}>
                                             <td>{item.id}</td>
                                             <td>{item.name}</td>
+                                            <td>{item.designation}</td>
                                             <td>{address.line1}</td>
                                             <td>{address.city}</td>
                                             <td>{address.country}</td>

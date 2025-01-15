@@ -5,6 +5,7 @@ import './EmpCreate.css';
 const EmpCreate = () => {
     const [id, idChange] = useState("");
     const [name, nameChange] = useState("");
+    const [designation, designationChange] = useState("");
     const [address_line1, address_line1Change] = useState("");
     const [city, cityChange] = useState("");
     const [country, countryChange] = useState("");
@@ -28,6 +29,7 @@ const EmpCreate = () => {
         e.preventDefault();
         const empData = {
             name,
+            designation,
             address: {
                 line1: address_line1,
                 city,
@@ -72,6 +74,12 @@ const EmpCreate = () => {
                                         <div className="form-group">
                                             <label>Name:</label>
                                             <input value={name} onChange={e => nameChange(e.target.value)} className="form-control" required />
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-12">
+                                        <div className="form-group">
+                                            <label>Designation:</label>
+                                            <input value={designation} onChange={e => designationChange(e.target.value)} className="form-control" required />
                                         </div>
                                     </div>
                                     <div className="col-lg-12">

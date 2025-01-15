@@ -7,6 +7,7 @@ const EmpEdit = () => {
 
     const [empdata, setEmpData] = useState({
         name: "",
+        designation: "",
         address: {
             line1: "",
             city: "",
@@ -26,6 +27,7 @@ const EmpEdit = () => {
             .then((resp) => {
                 setEmpData({
                     name: resp.name || "",
+                    designation: resp.designation || "",
                     address: resp.address || {
                         line1: "",
                         city: "",
@@ -118,7 +120,23 @@ const EmpEdit = () => {
                                                 className="form-control"
                                             />
                                             {empdata.name.length === 0 && validation && (
-                                                <span className="text-danger">Enter the name</span>
+                                                <span className="text-danger">Enter the name:</span>
+                                            )}
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-12">
+                                        <div className="form-group">
+                                            <label>Designation:</label>
+                                            <input
+                                                required
+                                                name="designation"
+                                                value={empdata.designation}
+                                                onMouseDown={() => setValidation(true)}
+                                                onChange={handleInputChange}
+                                                className="form-control"
+                                            />
+                                            {empdata.name.length === 0 && validation && (
+                                                <span className="text-danger">Enter the Designation:</span>
                                             )}
                                         </div>
                                     </div>
