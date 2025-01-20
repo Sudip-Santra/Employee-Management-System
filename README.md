@@ -1,14 +1,14 @@
 # Follow These Steps To Run This Project
 
-Step 1 : Clone the project
+Step 1: Clone the project
 
-Step 2 : Open two integrated terminals for the project
+Step 2: Open two integrated terminals for the project
 
-Step 3 : Install all the dependencies of the project (This project includes react, bootstrap and json-server)
+Step 3: Install all the dependencies of the project (This project includes react, bootstrap and json-server)
 
-Step 4 : Run this command in the first terminal 'json-server --watch db.json --port 8000'
+Step 4: Run this command in the first terminal 'json-server --watch db.json --port 8000'
 
-Step 5 : Run this command in the other terminal 'npm start'
+Step 5: Run this command in the other terminal 'npm start'
 
 # Product Demo
 
