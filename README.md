@@ -1,3 +1,7 @@
+# Product Demo
+
+https://github.com/user-attachments/assets/3845e102-2c97-4517-9b8c-49c4dcda3098
+
 # Follow These Steps To Run This Project
 
 Step 1: Clone the project
@@ -9,10 +13,6 @@ Step 3: Install all the dependencies of the project (This project includes react
 Step 4: Run this command in the first terminal 'json-server --watch db.json --port 8000'
 
 Step 5: Run this command in the other terminal 'npm start'
-
-# Product Demo
-
-https://github.com/user-attachments/assets/3845e102-2c97-4517-9b8c-49c4dcda3098
 
 # Getting Started with Create React App
 
