@@ -35,7 +35,7 @@ const EmpDetail = () => {
                         <div>
                             <div className="mb-4">
                                 <h5>The Employee name is: <b>{empdata.name}</b> ({empdata.id})</h5>
-                                <h5>Designation: <b>{empdata.designation}</b>)</h5>
+                                <h5>Designation: <b>{empdata.designation}</b></h5>
                             </div>
                             <div className="mb-4">
                                 <h5><u>Address Details</u></h5>
