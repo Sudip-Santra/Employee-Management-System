@@ -12,6 +12,8 @@ Step 5: Run this command in the other terminal 'npm start'
 
 # Product Demo
 
+https://github.com/user-attachments/assets/3845e102-2c97-4517-9b8c-49c4dcda3098
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
